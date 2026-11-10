@@ -1,0 +1,12 @@
+# asm_llm kit: the model lives in the repository, never in git. The grader puts the same
+# pinned snapshot at ./model and refuses any committed weight.
+model/
+*.safetensors
+!adapter/adapter_model.safetensors
+*.bin
+*.gguf
+*.pt
+*.o
+.venv/
+__pycache__/
+gen/

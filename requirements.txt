@@ -1,0 +1,9 @@
+# Versions that produced the reference adapter (runner VM venv, 2026-09-19).
+# torch is not pinned: use the one Colab ships, or `uv pip install torch --torch-backend=auto` in a venv.
+transformers==5.17.0
+peft==0.20.0
+safetensors==0.8.0  # resolved with the two above in the chantier A image, 2026-09-25
+# Used by the course decks (load_dataset in 0008-etape-3, hf upload in 0011-etape-6), not by the kit scripts.
+# huggingface_hub<2.0 is what transformers 5.17.0 requires; 1.33.0 is the infra/gpu/trainer pin (PyPI checked 2026-10-16).
+datasets==5.0.1
+huggingface_hub==1.33.0

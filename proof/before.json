@@ -1,0 +1,1873 @@
+{
+ "what": "The bare model on the 23 bootcamp statements, each program run against the bootcamp tests. No adapter.",
+ "model": "Qwen/Qwen3-0.6B",
+ "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+ "dtype": "float32",
+ "device": "cpu",
+ "threads": 8,
+ "max_new_tokens": 700,
+ "greedy": true,
+ "torch": "2.15.0+cpu",
+ "transformers": "5.17.0",
+ "date": "2026-11-08",
+ "gen_seconds": 1385.6,
+ "gen_tokens": 9530,
+ "classes": {
+  "FORMAT": "no code block in the answer",
+  "SYNTAXE": "nasm refuses the program",
+  "LOGIQUE": "assembles, fails every test",
+  "COUVERTURE": "passes some tests, fails others",
+  "PASS": "passes every test"
+ },
+ "passed": 0,
+ "exercises": [
+  {
+   "id": "asm00",
+   "name": "Return Zero",
+   "class": "SYNTAXE",
+   "tokens": 700,
+   "capped": true,
+   "has_code_block": true,
+   "built": false,
+   "tests_passed": 0,
+   "tests_run": 1,
+   "program": "```nasm\nsection .text\n    global _start\n\n_start:\n    ; Exit with code 0\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor r8, r8\n    xor r9, r9\n    xor r10, r10\n    xor r11, r11\n    xor r12, r12\n    xor r13, r13\n    xor r14, r14\n    xor r15, r15\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor r8, r8\n    xor r9, r9\n    xor r10, r10\n    xor r11, r11\n    xor r12, r12\n    xor r13, r13\n    xor r14, r14\n    xor r15, r15\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor r8, r8\n    xor r9, r9\n    xor r10, r10\n    xor r11, r11\n    xor r12, r12\n    xor r13, r13\n    xor r14, r14\n    xor r15, r15\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor r8, r8\n    xor r9, r9\n    xor r10, r10\n    xor r11, r11\n    xor r12, r12\n    xor r13, r13\n    xor r14, r14\n    xor r15, r15\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor r8, r8\n    xor r9, r9\n    xor r10, r10\n    xor r11, r11\n    xor r12, r12\n    xor r13, r13\n    xor r14, r14\n    xor r15, r15\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor r8, r8\n    xor r9, r9\n    xor r10, r10\n    xor r11, r11\n    xor r12, r12\n    xor r13, r13\n    xor r14, r14\n    xor r15, r15\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi,\n",
+   "answer": "```nasm\nsection .text\n    global _start\n\n_start:\n    ; Exit with code 0\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor r8, r8\n    xor r9, r9\n    xor r10, r10\n    xor r11, r11\n    xor r12, r12\n    xor r13, r13\n    xor r14, r14\n    xor r15, r15\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor r8, r8\n    xor r9, r9\n    xor r10, r10\n    xor r11, r11\n    xor r12, r12\n    xor r13, r13\n    xor r14, r14\n    xor r15, r15\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor r8, r8\n    xor r9, r9\n    xor r10, r10\n    xor r11, r11\n    xor r12, r12\n    xor r13, r13\n    xor r14, r14\n    xor r15, r15\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor r8, r8\n    xor r9, r9\n    xor r10, r10\n    xor r11, r11\n    xor r12, r12\n    xor r13, r13\n    xor r14, r14\n    xor r15, r15\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor r8, r8\n    xor r9, r9\n    xor r10, r10\n    xor r11, r11\n    xor r12, r12\n    xor r13, r13\n    xor r14, r14\n    xor r15, r15\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor r8, r8\n    xor r9, r9\n    xor r10, r10\n    xor r11, r11\n    xor r12, r12\n    xor r13, r13\n    xor r14, r14\n    xor r15, r15\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi,",
+   "shown": "  KO Build\n     Kind: basic\n     Command: nasm -f elf64 asm00.s -o asm00.o && ld asm00.o -o asm00\n     Exit code: expected 0, got 1\n     stderr:\n       asm00.s:1: warning: unterminated string (missing ``') [-w+pp-open-string]\n       asm00.s:1: error: label or instruction expected at start of line\n  KO Exit code 0 (skipped after critical failure)\n  KO No comments (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "Exit code 0",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm01",
+   "name": "Print 1337",
+   "class": "SYNTAXE",
+   "tokens": 700,
+   "capped": true,
+   "has_code_block": true,
+   "built": false,
+   "tests_passed": 0,
+   "tests_run": 1,
+   "program": "```nasm\nsection .text\n    global _start\n\n_start:\n    mov rax, 1337\n    mov rdx, rax\n    mov rax, 0\n    mov rdx, rax\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor\n",
+   "answer": "```nasm\nsection .text\n    global _start\n\n_start:\n    mov rax, 1337\n    mov rdx, rax\n    mov rax, 0\n    mov rdx, rax\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor rdx, rdx\n    xor rax, rax\n    xor",
+   "shown": "  KO Build\n     Kind: basic\n     Command: nasm -f elf64 asm01.s -o asm01.o && ld asm01.o -o asm01\n     Exit code: expected 0, got 1\n     stderr:\n       asm01.s:1: warning: unterminated string (missing ``') [-w+pp-open-string]\n       asm01.s:1: error: label or instruction expected at start of line\n  KO Output: 1337 (skipped after critical failure)\n  KO No comments (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "Output: 1337",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm02",
+   "name": "Read input and check if 42",
+   "class": "SYNTAXE",
+   "tokens": 56,
+   "capped": false,
+   "has_code_block": true,
+   "built": false,
+   "tests_passed": 0,
+   "tests_run": 1,
+   "program": "section .text\n    global main\n\nmain:\n    read from stdin\n    if (input == '42') then\n        print '1337'\n        exit 0\n    else\n        print ''\n        exit 1\n",
+   "answer": "```nasm\nsection .text\n    global main\n\nmain:\n    read from stdin\n    if (input == '42') then\n        print '1337'\n        exit 0\n    else\n        print ''\n        exit 1\n```",
+   "shown": "  KO Build\n     Kind: basic\n     Command: nasm -f elf64 asm02.s -o asm02.o && ld asm02.o -o asm02\n     Exit code: expected 0, got 1\n     stderr:\n       asm02.s:5: error: parser: instruction expected\n       asm02.s:6: error: parser: instruction expected\n       asm02.s:7: error: parser: instruction expected\n       asm02.s:8: error: parser: instruction expected\n       asm02.s:9: warning: label alone on a line without a colon might be in error [-w+label-orphan]\n       asm02.s:10: error: parser: instruction expected\n       asm02.s:11: error: parser: instruction expected\n  KO Input 42 -> 1337 (skipped after critical failure)\n  KO Input 24 -> exit 1 (skipped after critical failure)\n  KO Empty input -> exit 1 (skipped after critical failure)\n  KO Input 4 -> exit 1 (skipped after critical failure)\n  KO Input 420 -> exit 1 (skipped after critical failure)\n  KO Input 4242 -> exit 1 (skipped after critical failure)\n  KO Input 042 -> exit 1 (skipped after critical failure)\n  KO Input 42a -> exit 1 (skipped after critical failure)\n  KO Input 42? -> exit 1 (skipped after critical failure)\n  KO Input 402 -> exit 1 (skipped after critical failure)\n  KO Input ' 42' (leading space) -> exit 1 (skipped after critical failure)\n  KO Non-numeric input -> exit 1 (skipped after critical failure)\n  KO Closed stdin -> exit 1 (skipped after critical failure)\n  KO 1 KiB of input does not crash (skipped after critical failure)\n  KO No comments (skipped after critical failure)\n  KO Output ends with exactly one newline (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "Input 42 -> 1337",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "Input 24 -> exit 1",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Empty input -> exit 1",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Input 4 -> exit 1",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Input 420 -> exit 1",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "Input 4242 -> exit 1",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Input 042 -> exit 1",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Input 42a -> exit 1",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Input 42? -> exit 1",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Input 402 -> exit 1",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Input ' 42' (leading space) -> exit 1",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Non-numeric input -> exit 1",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Closed stdin -> exit 1",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "1 KiB of input does not crash",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "Output ends with exactly one newline",
+     "visibility": "grading",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm03",
+   "name": "Read argument and check if 42",
+   "class": "SYNTAXE",
+   "tokens": 70,
+   "capped": false,
+   "has_code_block": true,
+   "built": false,
+   "tests_passed": 0,
+   "tests_run": 1,
+   "program": "section .text\n    global main\n\nmain:\n    mov rax, 0\n    call read\n    if rax == 0\n        mov rax, 1\n        print \"1337\\n\"\n    else\n        mov rax, 2\n        print \"\"\n    exit\n",
+   "answer": "```nasm\nsection .text\n    global main\n\nmain:\n    mov rax, 0\n    call read\n    if rax == 0\n        mov rax, 1\n        print \"1337\\n\"\n    else\n        mov rax, 2\n        print \"\"\n    exit\n```",
+   "shown": "  KO Build\n     Kind: basic\n     Command: nasm -f elf64 asm03.s -o asm03.o && ld asm03.o -o asm03\n     Exit code: expected 0, got 1\n     stderr:\n       asm03.s:7: error: parser: instruction expected\n       asm03.s:9: error: parser: instruction expected\n       asm03.s:10: warning: label alone on a line without a colon might be in error [-w+label-orphan]\n       asm03.s:12: error: label `print' inconsistently redefined\n       asm03.s:9: info: label `print' originally defined here\n       asm03.s:12: error: parser: instruction expected\n       asm03.s:13: warning: label alone on a line without a colon might be in error [-w+label-orphan]\n  KO Arg 42 -> 1337 (skipped after critical failure)\n  KO Arg 24 -> exit 1 (skipped after critical failure)\n  KO No arg -> exit 2 (usage), no output (skipped after critical failure)\n  KO Arg -42 -> exit 1 (skipped after critical failure)\n  KO Two args -> exit 2 (usage), no output (skipped after critical failure)\n  KO Arg 420 rejected (exact match, not prefix) (skipped after critical failure)\n  KO Arg 4 rejected (exact match, not partial) (skipped after critical failure)\n  KO No comments (skipped after critical failure)\n  KO Output ends with exactly one newline (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "Arg 42 -> 1337",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "Arg 24 -> exit 1",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No arg -> exit 2 (usage), no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Arg -42 -> exit 1",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Two args -> exit 2 (usage), no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Arg 420 rejected (exact match, not prefix)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Arg 4 rejected (exact match, not partial)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "Output ends with exactly one newline",
+     "visibility": "grading",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm04",
+   "name": "Even Number Test",
+   "class": "SYNTAXE",
+   "tokens": 700,
+   "capped": true,
+   "has_code_block": true,
+   "built": false,
+   "tests_passed": 0,
+   "tests_run": 1,
+   "program": "```nasm\nsection .data\n    input_number db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00\n    input_number_len equ $input_number_len\n\nsection .text\n    global main\n\nmain:\n    ; Read a number from stdin\n    read:\n        mov rax, 0\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax,\n",
+   "answer": "```nasm\nsection .data\n    input_number db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00\n    input_number_len equ $input_number_len\n\nsection .text\n    global main\n\nmain:\n    ; Read a number from stdin\n    read:\n        mov rax, 0\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, 0x00000000\n        mov rax, ",
+   "shown": "  KO Build\n     Kind: basic\n     Command: nasm -f elf64 asm04.s -o asm04.o && ld asm04.o -o asm04\n     Exit code: expected 0, got 1\n     stderr:\n       asm04.s:1: warning: unterminated string (missing ``') [-w+pp-open-string]\n       asm04.s:1: error: label or instruction expected at start of line\n  KO 4 is even (skipped after critical failure)\n  KO 5 is odd (skipped after critical failure)\n  KO 0 is even (skipped after critical failure)\n  KO 100 is even (skipped after critical failure)\n  KO 101 is odd (skipped after critical failure)\n  KO Non-numeric input -> exit 2 (skipped after critical failure)\n  KO -4 is even (exit 0) (skipped after critical failure)\n  KO -5 is odd (exit 1) (skipped after critical failure)\n  KO -100 is even (exit 0) (skipped after critical failure)\n  KO Letter a -> exit 2, no output (skipped after critical failure)\n  KO -1 is odd (exit 1) (skipped after critical failure)\n  KO Malformed -12ld -> exit 2, no output (skipped after critical failure)\n  KO Letters then a digit nstrt2 -> exit 2, no output (skipped after critical failure)\n  KO Sign then letters then a digit -aaa2 -> exit 2, no output (skipped after critical failure)\n  KO Digits then letters 12ab -> exit 2, no output (skipped after critical failure)\n  KO A sign alone - -> exit 2, no output (skipped after critical failure)\n  KO Two signs --4 -> exit 2, no output (skipped after critical failure)\n  KO One digit then a letter 4a -> exit 2, no output (skipped after critical failure)\n  KO Leading space ' 4' -> exit 2, no output (skipped after critical failure)\n  KO Two numbers on the line '4 5' -> exit 2, no output (skipped after critical failure)\n  KO No comments (skipped after critical failure)\n  KO Empty input -> exit 2, no output (skipped after critical failure)\n  KO 1000000000000 is even (skipped after critical failure)\n  KO 1000000000001 is odd (skipped after critical failure)\n  KO 9223372036854775807 is odd (INT64_MAX) (skipped after critical failure)\n  KO -9223372036854775808 is even (INT64_MIN) (skipped after critical failure)\n  KO 9223372036854775808 -> exit 2 (beyond 64 bits) (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "4 is even",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "5 is odd",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "0 is even",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "100 is even",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "101 is odd",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Non-numeric input -> exit 2",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "-4 is even (exit 0)",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "-5 is odd (exit 1)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "-100 is even (exit 0)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Letter a -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "-1 is odd (exit 1)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Malformed -12ld -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Letters then a digit nstrt2 -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Sign then letters then a digit -aaa2 -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Digits then letters 12ab -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "A sign alone - -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Two signs --4 -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "One digit then a letter 4a -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Leading space ' 4' -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Two numbers on the line '4 5' -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "Empty input -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "1000000000000 is even",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "1000000000001 is odd",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "9223372036854775807 is odd (INT64_MAX)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "-9223372036854775808 is even (INT64_MIN)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "9223372036854775808 -> exit 2 (beyond 64 bits)",
+     "visibility": "grading",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm05",
+   "name": "Print Argument",
+   "class": "SYNTAXE",
+   "tokens": 700,
+   "capped": true,
+   "has_code_block": true,
+   "built": false,
+   "tests_passed": 0,
+   "tests_run": 1,
+   "program": "```nasm\nsection .data\n    msg db 'Hello, world!', 0xa\n\nsection .text\n    global _start\n\n_start:\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax,\n",
+   "answer": "```nasm\nsection .data\n    msg db 'Hello, world!', 0xa\n\nsection .text\n    global _start\n\n_start:\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax, 1\n    mov rax, 0\n    mov rax,",
+   "shown": "  KO Build\n     Kind: basic\n     Command: nasm -f elf64 asm05.s -o asm05.o && ld asm05.o -o asm05\n     Exit code: expected 0, got 1\n     stderr:\n       asm05.s:1: warning: unterminated string (missing ``') [-w+pp-open-string]\n       asm05.s:1: error: label or instruction expected at start of line\n  KO Print Hello, Universe! (skipped after critical failure)\n  KO Print test (skipped after critical failure)\n  KO Empty string (skipped after critical failure)\n  KO Special chars (skipped after critical failure)\n  KO Long string (skipped after critical failure)\n  KO Empty arg prints nothing (skipped after critical failure)\n  KO No comments (skipped after critical failure)\n  KO No argument -> exit 2, no output (skipped after critical failure)\n  KO Two arguments -> exit 2, no output (skipped after critical failure)\n  KO Output ends with exactly one newline (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "Print Hello, Universe!",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "Print test",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Empty string",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Special chars",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Long string",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Empty arg prints nothing",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "No argument -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Two arguments -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Output ends with exactly one newline",
+     "visibility": "grading",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm06",
+   "name": "Add Two Numbers",
+   "class": "SYNTAXE",
+   "tokens": 700,
+   "capped": true,
+   "has_code_block": true,
+   "built": false,
+   "tests_passed": 0,
+   "tests_run": 1,
+   "program": "```nasm\nsection .data\n    result    [qword]  ; Store the result of the addition\n\nsection .text\n    global _start\n\n_start:\n    ; Check if exactly two arguments are passed\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n",
+   "answer": "```nasm\nsection .data\n    result    [qword]  ; Store the result of the addition\n\nsection .text\n    global _start\n\n_start:\n    ; Check if exactly two arguments are passed\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0\n    mov rax, 0",
+   "shown": "  KO Build\n     Kind: basic\n     Command: nasm -f elf64 asm06.s -o asm06.o && ld asm06.o -o asm06\n     Exit code: expected 0, got 1\n     stderr:\n       asm06.s:1: warning: unterminated string (missing ``') [-w+pp-open-string]\n       asm06.s:1: error: label or instruction expected at start of line\n       asm06.s:3: error: parser: instruction expected\n  KO 10 + 15 = 25 (skipped after critical failure)\n  KO 0 + 0 = 0 (skipped after critical failure)\n  KO 100 + 200 = 300 (skipped after critical failure)\n  KO 1 + 1 = 2 (skipped after critical failure)\n  KO 999 + 1 = 1000 (skipped after critical failure)\n  KO -5 + 10 = 5 (signed) (skipped after critical failure)\n  KO -5 + -3 = -8 (skipped after critical failure)\n  KO -100 + 50 = -50 (skipped after critical failure)\n  KO ASCII arg -> exit 1, no output (skipped after critical failure)\n  KO -1 + -1 = -2 (skipped after critical failure)\n  KO Malformed arg -12ld -> exit 1, no output (skipped after critical failure)\n  KO No comments (skipped after critical failure)\n  KO No argument -> exit 2, no output (skipped after critical failure)\n  KO One argument -> exit 2, no output (skipped after critical failure)\n  KO Three arguments -> exit 2, no output (skipped after critical failure)\n  KO Output ends with exactly one newline (skipped after critical failure)\n  KO 4000000000 + 4000000000 = 8000000000 (64-bit) (skipped after critical failure)\n  KO 9223372036854775807 + 0 = 9223372036854775807 (skipped after critical failure)\n  KO -9223372036854775808 + 0 = -9223372036854775808 (skipped after critical failure)\n  KO 9223372036854775807 + 1 -> exit 1 (overflow) (skipped after critical failure)\n  KO 9223372036854775808 + 0 -> exit 1 (beyond 64 bits) (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "10 + 15 = 25",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "0 + 0 = 0",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "100 + 200 = 300",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "1 + 1 = 2",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "999 + 1 = 1000",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "-5 + 10 = 5 (signed)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "-5 + -3 = -8",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "-100 + 50 = -50",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "ASCII arg -> exit 1, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "-1 + -1 = -2",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Malformed arg -12ld -> exit 1, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "No argument -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "One argument -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Three arguments -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Output ends with exactly one newline",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "4000000000 + 4000000000 = 8000000000 (64-bit)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "9223372036854775807 + 0 = 9223372036854775807",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "-9223372036854775808 + 0 = -9223372036854775808",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "9223372036854775807 + 1 -> exit 1 (overflow)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "9223372036854775808 + 0 -> exit 1 (beyond 64 bits)",
+     "visibility": "grading",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm07",
+   "name": "Prime Number Test",
+   "class": "LOGIQUE",
+   "tokens": 11,
+   "capped": false,
+   "has_code_block": true,
+   "built": true,
+   "tests_passed": 1,
+   "tests_run": 2,
+   "program": "asm07.s\n",
+   "answer": "```nasm\nasm07.s\n```",
+   "shown": "  OK Build\n  KO 7 is prime\n     Kind: basic\n     Command: echo 7 | ./asm07\n     Exit code: expected 0, got 126\n     stderr:\n       bash: line 1: ./asm07: cannot execute binary file: Exec format error\n  KO 8 is not prime (skipped after critical failure)\n  KO 2 is prime (skipped after critical failure)\n  KO 1 is not prime (skipped after critical failure)\n  KO 97 is prime (skipped after critical failure)\n  KO 100 is not prime (skipped after critical failure)\n  KO No comments (skipped after critical failure)\n  KO 9 is not prime (odd composite) (skipped after critical failure)\n  KO 25 is not prime (skipped after critical failure)\n  KO 49 is not prime (skipped after critical failure)\n  KO 4 is not prime (skipped after critical failure)\n  KO 0 is not prime (skipped after critical failure)\n  KO -7 is not prime (skipped after critical failure)\n  KO 7919 is prime (skipped after critical failure)\n  KO 104729 is prime (skipped after critical failure)\n  KO Empty input -> exit 2, no output (skipped after critical failure)\n  KO Non numeric input -> exit 2, no output (skipped after critical failure)\n  KO -9223372036854775808 is not prime (skipped after critical failure)\n  KO 9223372036854775807 is not prime (7 x 73 x ...) (skipped after critical failure)\n  KO 9223372036854775808 -> exit 2 (beyond 64 bits) (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ok"
+    },
+    {
+     "name": "7 is prime",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "8 is not prime",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "2 is prime",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "1 is not prime",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "97 is prime",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "100 is not prime",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "9 is not prime (odd composite)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "25 is not prime",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "49 is not prime",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "4 is not prime",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "0 is not prime",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "-7 is not prime",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "7919 is prime",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "104729 is prime",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Empty input -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Non numeric input -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "-9223372036854775808 is not prime",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "9223372036854775807 is not prime (7 x 73 x ...)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "9223372036854775808 -> exit 2 (beyond 64 bits)",
+     "visibility": "grading",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm08",
+   "name": "Sum of Integers",
+   "class": "SYNTAXE",
+   "tokens": 700,
+   "capped": true,
+   "has_code_block": true,
+   "built": false,
+   "tests_passed": 0,
+   "tests_run": 1,
+   "program": "```nasm\nsection .data\n    sum_text    db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x\n",
+   "answer": "```nasm\nsection .data\n    sum_text    db 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x",
+   "shown": "  KO Build\n     Kind: basic\n     Command: nasm -f elf64 asm08.s -o asm08.o && ld asm08.o -o asm08\n     Exit code: expected 0, got 1\n     stderr:\n       asm08.s:1: warning: unterminated string (missing ``') [-w+pp-open-string]\n       asm08.s:1: error: label or instruction expected at start of line\n  KO Sum below 5 = 10 (skipped after critical failure)\n  KO Sum below 1 = 0 (skipped after critical failure)\n  KO Sum below 10 = 45 (skipped after critical failure)\n  KO Sum below 100 = 4950 (skipped after critical failure)\n  KO N=0 terminates (no underflow loop) (skipped after critical failure)\n  KO No comments (skipped after critical failure)\n  KO No argument -> exit 2, no output (skipped after critical failure)\n  KO Too many arguments -> exit 2, no output (skipped after critical failure)\n  KO Non numeric argument -> exit 1, no output (skipped after critical failure)\n  KO Negative N -> 0 (empty range) (skipped after critical failure)\n  KO N = 1 -> 0 (empty range) (skipped after critical failure)\n  KO Sum below 1000 = 499500 (skipped after critical failure)\n  KO Output ends with exactly one newline (skipped after critical failure)\n  KO -9223372036854775808 -> 0 (empty range) (skipped after critical failure)\n  KO 9223372036854775808 -> exit 1 (beyond 64 bits) (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "Sum below 5 = 10",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "Sum below 1 = 0",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Sum below 10 = 45",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Sum below 100 = 4950",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "N=0 terminates (no underflow loop)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "No argument -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Too many arguments -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Non numeric argument -> exit 1, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Negative N -> 0 (empty range)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "N = 1 -> 0 (empty range)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Sum below 1000 = 499500",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Output ends with exactly one newline",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "-9223372036854775808 -> 0 (empty range)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "9223372036854775808 -> exit 1 (beyond 64 bits)",
+     "visibility": "grading",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm09",
+   "name": "Base Conversion",
+   "class": "SYNTAXE",
+   "tokens": 700,
+   "capped": true,
+   "has_code_block": true,
+   "built": false,
+   "tests_passed": 0,
+   "tests_run": 1,
+   "program": "```nasm\nsection .data\n    hex_str    db '0x', 0xa\n    hex_upper   db '\\n', 0x0\n    hex_lower   db '\\n', 0x0\n    hex_upper_upper db '\\n', 0x0\n    hex_lower_lower db '\\n', 0x0\n    hex_upper_lower db '\\n', 0x0\n    hex_lower_upper db '\\n', 0x0\n    hex_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x\n",
+   "answer": "```nasm\nsection .data\n    hex_str    db '0x', 0xa\n    hex_upper   db '\\n', 0x0\n    hex_lower   db '\\n', 0x0\n    hex_upper_upper db '\\n', 0x0\n    hex_lower_lower db '\\n', 0x0\n    hex_upper_lower db '\\n', 0x0\n    hex_lower_upper db '\\n', 0x0\n    hex_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x0\n    hex_lower_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_lower_lower_lower_lower db '\\n', 0x0\n    hex_upper_upper_upper_upper_upper_upper db '\\n', 0x",
+   "shown": "  KO Build\n     Kind: basic\n     Command: nasm -f elf64 asm09.s -o asm09.o && ld asm09.o -o asm09\n     Exit code: expected 0, got 1\n     stderr:\n       asm09.s:1: warning: unterminated string (missing ``') [-w+pp-open-string]\n       asm09.s:1: error: label or instruction expected at start of line\n       asm09.s:21: error: label `hex_upper_lower_lower_lower_lower_lower_lower' inconsistently redefined\n       asm09.s:18: info: label `hex_upper_lower_lower_lower_lower_lower_lower' originally defined here\n       asm09.s:22: error: label `hex_upper_upper_upper_upper_upper_upper' inconsistently redefined\n       asm09.s:19: info: label `hex_upper_upper_upper_upper_upper_upper' originally defined here\n       asm09.s:23: error: label `hex_lower_lower_lower_lower_lower_lower' inconsistently redefined\n       asm09.s:17: info: label `hex_lower_lower_lower_lower_lower_lower' originally defined here\n       asm09.s:25: error: label `hex_upper_upper_upper_upper_upper_upper' inconsistently redefined\n       asm09.s:22: info: label `hex_upper_upper_upper_upper_upper_upper' originally defined here\n       asm09.s:27: error: label `hex_upper_lower_lower_lower_lower' inconsistently redefined\n       asm09.s:15: info: label `hex_upper_lower_lower_lower_lower'\n  KO 15 -> F (hex) (skipped after critical failure)\n  KO 15 -> 1111 (binary) (skipped after critical failure)\n  KO 255 -> FF (skipped after critical failure)\n  KO 0 -> 0 (skipped after critical failure)\n  KO 8 -> 1000 (binary) (skipped after critical failure)\n  KO No comments (skipped after critical failure)\n  KO No argument -> exit 2, no output (skipped after critical failure)\n  KO Too many arguments -> exit 2, no output (skipped after critical failure)\n  KO -b without a number -> exit 2, no output (skipped after critical failure)\n  KO Non numeric argument -> exit 1, no output (skipped after critical failure)\n  KO 0 -> 0 (binary) (skipped after critical failure)\n  KO 16 -> 10 (skipped after critical failure)\n  KO 4294967295 -> FFFFFFFF (skipped after critical failure)\n  KO 255 -> 11111111 (binary) (skipped after critical failure)\n  KO Output ends with exactly one newline (skipped after critical failure)\n  KO -255 -> -FF (skipped after critical failure)\n  KO -b -8 -> -1000 (skipped after critical failure)\n  KO 9223372036854775807 -> 7FFFFFFFFFFFFFFF (skipped after critical failure)\n  KO -9223372036854775808 -> -8000000000000000 (skipped after critical failure)\n  KO 9223372036854775808 -> exit 1 (beyond 64 bits) (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "15 -> F (hex)",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "15 -> 1111 (binary)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "255 -> FF",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "0 -> 0",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "8 -> 1000 (binary)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "No argument -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Too many arguments -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "-b without a number -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Non numeric argument -> exit 1, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "0 -> 0 (binary)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "16 -> 10",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "4294967295 -> FFFFFFFF",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "255 -> 11111111 (binary)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Output ends with exactly one newline",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "-255 -> -FF",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "-b -8 -> -1000",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "9223372036854775807 -> 7FFFFFFFFFFFFFFF",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "-9223372036854775808 -> -8000000000000000",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "9223372036854775808 -> exit 1 (beyond 64 bits)",
+     "visibility": "grading",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm10",
+   "name": "Maximum of Three",
+   "class": "SYNTAXE",
+   "tokens": 700,
+   "capped": true,
+   "has_code_block": true,
+   "built": false,
+   "tests_passed": 0,
+   "tests_run": 1,
+   "program": "```nasm\nsection .data\n    max_num    dd 0\n\nsection .text\n    global _start\n\n_start:\n    ; Check if exactly three arguments are passed\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n",
+   "answer": "```nasm\nsection .data\n    max_num    dd 0\n\nsection .text\n    global _start\n\n_start:\n    ; Check if exactly three arguments are passed\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax",
+   "shown": "  KO Build\n     Kind: basic\n     Command: nasm -f elf64 asm10.s -o asm10.o && ld asm10.o -o asm10\n     Exit code: expected 0, got 1\n     stderr:\n       asm10.s:1: warning: unterminated string (missing ``') [-w+pp-open-string]\n       asm10.s:1: error: label or instruction expected at start of line\n  KO Max(7,3,5) = 7 (skipped after critical failure)\n  KO Max(1,2,9) = 9 (skipped after critical failure)\n  KO Max(3,8,5) = 8 (skipped after critical failure)\n  KO Max(5,5,5) = 5 (skipped after critical failure)\n  KO Max(0,0,0) = 0 (skipped after critical failure)\n  KO Max(-1,-5,-3) = -1 (signed compare) (skipped after critical failure)\n  KO Max(-10,5,-3) = 5 (skipped after critical failure)\n  KO Max(-7,-7,-7) = -7 (skipped after critical failure)\n  KO ASCII arg -> exit 1, no output (skipped after critical failure)\n  KO Max(-5,-1,-9) = -1 (skipped after critical failure)\n  KO Malformed arg -12ld -> exit 1, no output (skipped after critical failure)\n  KO No comments (skipped after critical failure)\n  KO No argument -> exit 2, no output (skipped after critical failure)\n  KO Two arguments -> exit 2, no output (skipped after critical failure)\n  KO Four arguments -> exit 2, no output (skipped after critical failure)\n  KO Output ends with exactly one newline (skipped after critical failure)\n  KO Max(9223372036854775807, 0, -9223372036854775808) = 9223372036854775807 (skipped after critical failure)\n  KO Max(-9223372036854775808, -9223372036854775808, -9223372036854775807) = -9223372036854775807 (skipped after critical failure)\n  KO 9223372036854775808 1 2 -> exit 1 (beyond 64 bits) (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "Max(7,3,5) = 7",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "Max(1,2,9) = 9",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Max(3,8,5) = 8",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Max(5,5,5) = 5",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Max(0,0,0) = 0",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Max(-1,-5,-3) = -1 (signed compare)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Max(-10,5,-3) = 5",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Max(-7,-7,-7) = -7",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "ASCII arg -> exit 1, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Max(-5,-1,-9) = -1",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Malformed arg -12ld -> exit 1, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "No argument -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Two arguments -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Four arguments -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Output ends with exactly one newline",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Max(9223372036854775807, 0, -9223372036854775808) = 9223372036854775807",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Max(-9223372036854775808, -9223372036854775808, -9223372036854775807) = -9223372036854775807",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "9223372036854775808 1 2 -> exit 1 (beyond 64 bits)",
+     "visibility": "grading",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm11",
+   "name": "Count Vowels",
+   "class": "LOGIQUE",
+   "tokens": 11,
+   "capped": false,
+   "has_code_block": true,
+   "built": true,
+   "tests_passed": 1,
+   "tests_run": 2,
+   "program": "asm11.s\n",
+   "answer": "```nasm\nasm11.s\n```",
+   "shown": "  OK Build\n  KO assemblage -> 4\n     Kind: basic\n     Command: echo assemblage | ./asm11\n     Exit code: expected 0, got 126\n     Expected: 4\n     stderr:\n       bash: line 1: ./asm11: cannot execute binary file: Exec format error\n  KO hello -> 2 (skipped after critical failure)\n  KO xyz -> 0 (skipped after critical failure)\n  KO AEIOU -> 5 (skipped after critical failure)\n  KO HeLLo WoRLd -> 3 (skipped after critical failure)\n  KO No comments (skipped after critical failure)\n  KO Empty input -> 0 (skipped after critical failure)\n  KO 1 KiB of a -> 1024 (skipped after critical failure)\n  KO Output ends with exactly one newline (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ok"
+    },
+    {
+     "name": "assemblage -> 4",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "hello -> 2",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "xyz -> 0",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "AEIOU -> 5",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "HeLLo WoRLd -> 3",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "Empty input -> 0",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "1 KiB of a -> 1024",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Output ends with exactly one newline",
+     "visibility": "grading",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm12",
+   "name": "Reverse String",
+   "class": "SYNTAXE",
+   "tokens": 73,
+   "capped": false,
+   "has_code_block": true,
+   "built": false,
+   "tests_passed": 0,
+   "tests_run": 1,
+   "program": "section .data\n    input_string: .ascii \"Hello, World!\"\n    output_string: .ascii \"\"\n\nsection .text\n    global _start\n\n_start:\n    read 0x80000000\n    write 0x80000000\n    exit 60\n",
+   "answer": "```nasm\nsection .data\n    input_string: .ascii \"Hello, World!\"\n    output_string: .ascii \"\"\n\nsection .text\n    global _start\n\n_start:\n    read 0x80000000\n    write 0x80000000\n    exit 60\n```",
+   "shown": "  KO Build\n     Kind: basic\n     Command: nasm -f elf64 asm12.s -o asm12.o && ld asm12.o -o asm12\n     Exit code: expected 0, got 1\n     stderr:\n       asm12.s:2: error: parser: instruction expected\n       asm12.s:3: error: parser: instruction expected\n       asm12.s:9: error: parser: instruction expected\n       asm12.s:10: error: parser: instruction expected\n       asm12.s:11: error: parser: instruction expected\n  KO Bonjour -> ruojnoB (skipped after critical failure)\n  KO hello -> olleh (skipped after critical failure)\n  KO a -> a (skipped after critical failure)\n  KO 12345 -> 54321 (skipped after critical failure)\n  KO Empty string reverses to empty (skipped after critical failure)\n  KO No comments (skipped after critical failure)\n  KO 1 KiB reversed (no python in the container) (skipped after critical failure)\n  KO Output ends with exactly one newline (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "Bonjour -> ruojnoB",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "hello -> olleh",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "a -> a",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "12345 -> 54321",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Empty string reverses to empty",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "1 KiB reversed (no python in the container)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Output ends with exactly one newline",
+     "visibility": "grading",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm13",
+   "name": "Palindrome Detection",
+   "class": "LOGIQUE",
+   "tokens": 11,
+   "capped": false,
+   "has_code_block": true,
+   "built": true,
+   "tests_passed": 1,
+   "tests_run": 2,
+   "program": "asm13.s\n",
+   "answer": "```nasm\nasm13.s\n```",
+   "shown": "  OK Build\n  KO radar is palindrome\n     Kind: basic\n     Command: echo radar | ./asm13\n     Exit code: expected 0, got 126\n     stderr:\n       bash: line 1: ./asm13: cannot execute binary file: Exec format error\n  KO bonjour is not (skipped after critical failure)\n  KO kayak is palindrome (skipped after critical failure)\n  KO a is palindrome (skipped after critical failure)\n  KO ab is not (skipped after critical failure)\n  KO No comments (skipped after critical failure)\n  KO abba is palindrome (even length) (skipped after critical failure)\n  KO abca is not (skipped after critical failure)\n  KO aa is palindrome (skipped after critical failure)\n  KO 1 KiB of a is palindrome (skipped after critical failure)\n  KO Empty input is a palindrome (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ok"
+    },
+    {
+     "name": "radar is palindrome",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "bonjour is not",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "kayak is palindrome",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "a is palindrome",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "ab is not",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "abba is palindrome (even length)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "abca is not",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "aa is palindrome",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "1 KiB of a is palindrome",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Empty input is a palindrome",
+     "visibility": "grading",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm14",
+   "name": "Write to File",
+   "class": "SYNTAXE",
+   "tokens": 700,
+   "capped": true,
+   "has_code_block": true,
+   "built": false,
+   "tests_passed": 0,
+   "tests_run": 1,
+   "program": "```nasm\nsection .text\n    global main\n\nmain:\n    ; Check if the argument is valid\n    mov rax, 0\n    xor rax, rax\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n",
+   "answer": "```nasm\nsection .text\n    global main\n\nmain:\n    ; Check if the argument is valid\n    mov rax, 0\n    xor rax, rax\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n    xor rax, 0x1\n   ",
+   "shown": "  KO Build\n     Kind: basic\n     Command: nasm -f elf64 asm14.s -o asm14.o && ld asm14.o -o asm14\n     Exit code: expected 0, got 1\n     stderr:\n       asm14.s:1: warning: unterminated string (missing ``') [-w+pp-open-string]\n       asm14.s:1: error: label or instruction expected at start of line\n  KO Write file (skipped after critical failure)\n  KO No comments (skipped after critical failure)\n  KO No argument -> exit 2, no output (skipped after critical failure)\n  KO Too many arguments -> exit 2, no output (skipped after critical failure)\n  KO Existing longer file is truncated (skipped after critical failure)\n  KO Unwritable path -> exit 1 (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "Write file",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "No argument -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Too many arguments -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Existing longer file is truncated",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Unwritable path -> exit 1",
+     "visibility": "grading",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm15",
+   "name": "Caesar Cipher",
+   "class": "SYNTAXE",
+   "tokens": 700,
+   "capped": true,
+   "has_code_block": true,
+   "built": false,
+   "tests_passed": 0,
+   "tests_run": 1,
+   "program": "```nasm\nsection .data\n    stdin_text    db '\\n', 0\n    stdin_length   dw 0\n\nsection .text\n    global main\n\nmain:\n    mov rax, 0\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n",
+   "answer": "```nasm\nsection .data\n    stdin_text    db '\\n', 0\n    stdin_length   dw 0\n\nsection .text\n    global main\n\nmain:\n    mov rax, 0\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax\n    xor rax, rax",
+   "shown": "  KO Build\n     Kind: basic\n     Command: nasm -f elf64 asm15.s -o asm15.o && ld asm15.o -o asm15\n     Exit code: expected 0, got 1\n     stderr:\n       asm15.s:1: warning: unterminated string (missing ``') [-w+pp-open-string]\n       asm15.s:1: error: label or instruction expected at start of line\n  KO hello +3 -> khoor (skipped after critical failure)\n  KO abc +1 -> bcd (skipped after critical failure)\n  KO xyz +3 -> abc (wrap) (skipped after critical failure)\n  KO ABC +1 -> BCD (skipped after critical failure)\n  KO hello +0 -> hello (skipped after critical failure)\n  KO Non-alpha chars pass through unchanged (skipped after critical failure)\n  KO No comments (skipped after critical failure)\n  KO No shift argument -> exit 2, no output (skipped after critical failure)\n  KO Too many arguments -> exit 2, no output (skipped after critical failure)\n  KO Non numeric shift -> exit 1, no output (skipped after critical failure)\n  KO hello +26 -> hello (full wrap) (skipped after critical failure)\n  KO hello +27 -> ifmmp (skipped after critical failure)\n  KO Empty input -> empty output (skipped after critical failure)\n  KO Output ends with exactly one newline (skipped after critical failure)\n  KO khoor -3 -> hello (shift back) (skipped after critical failure)\n  KO hello -29 -> ebiil (negative wrap) (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "hello +3 -> khoor",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "abc +1 -> bcd",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "xyz +3 -> abc (wrap)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "ABC +1 -> BCD",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "hello +0 -> hello",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Non-alpha chars pass through unchanged",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "No shift argument -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Too many arguments -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Non numeric shift -> exit 1, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "hello +26 -> hello (full wrap)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "hello +27 -> ifmmp",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Empty input -> empty output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Output ends with exactly one newline",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "khoor -3 -> hello (shift back)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "hello -29 -> ebiil (negative wrap)",
+     "visibility": "grading",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm16",
+   "name": "ELF x64 Detection",
+   "class": "LOGIQUE",
+   "tokens": 11,
+   "capped": false,
+   "has_code_block": true,
+   "built": true,
+   "tests_passed": 1,
+   "tests_run": 2,
+   "program": "asm16.s\n",
+   "answer": "```nasm\nasm16.s\n```",
+   "shown": "  OK Build\n  KO /bin/ls is ELF\n     Kind: basic\n     Command: ./asm16 /bin/ls\n     Exit code: expected 0, got 126\n     stderr:\n       bash: line 1: ./asm16: cannot execute binary file: Exec format error\n  KO /etc/passwd is not ELF (skipped after critical failure)\n  KO asm16 is ELF (skipped after critical failure)\n  KO asm16.s is not ELF (skipped after critical failure)\n  KO 32-bit ELF (ELFCLASS32) rejected (skipped after critical failure)\n  KO No comments (skipped after critical failure)\n  KO No argument -> exit 2, no output (skipped after critical failure)\n  KO Too many arguments -> exit 2, no output (skipped after critical failure)\n  KO Missing file -> exit 2, no output (skipped after critical failure)\n  KO 4-byte file with the ELF magic only -> not ELF x64 (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ok"
+    },
+    {
+     "name": "/bin/ls is ELF",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "/etc/passwd is not ELF",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "asm16 is ELF",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "asm16.s is not ELF",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "32-bit ELF (ELFCLASS32) rejected",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "No argument -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Too many arguments -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Missing file -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "4-byte file with the ELF magic only -> not ELF x64",
+     "visibility": "grading",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm17",
+   "name": "Binary Patching",
+   "class": "LOGIQUE",
+   "tokens": 11,
+   "capped": false,
+   "has_code_block": true,
+   "built": true,
+   "tests_passed": 1,
+   "tests_run": 2,
+   "program": "asm17.s\n",
+   "answer": "```nasm\nasm17.s\n```",
+   "shown": "  OK Build\n  KO Patch asm01\n     Kind: basic\n     Command: cp ../asm01/asm01 ./asm01_copy 2>/dev/null || (cd ../asm01 && nasm -f elf64 asm01.s -o asm01.o && ld asm01.o -o asm01 && cp asm01 ../asm17/asm01_copy) && ./asm17 asm01_copy && ./asm01_copy\n     Exit code: expected 0, got 1\n     Expected: H4CK\n     stderr:\n       asm01.s:1: warning: unterminated string (missing ``') [-w+pp-open-string]\n       asm01.s:1: error: label or instruction expected at start of line\n  KO Patch is in-place (file size unchanged) (skipped after critical failure)\n  KO Only target bytes changed (<= 4) (skipped after critical failure)\n  KO No comments (skipped after critical failure)\n  KO No argument -> exit 2, no output (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ok"
+    },
+    {
+     "name": "Patch asm01",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "Patch is in-place (file size unchanged)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Only target bytes changed (<= 4)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "No argument -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm18",
+   "name": "UDP Client",
+   "class": "SYNTAXE",
+   "tokens": 700,
+   "capped": true,
+   "has_code_block": true,
+   "built": false,
+   "tests_passed": 0,
+   "tests_run": 1,
+   "program": "```nasm\nsection .text\n    global main\n\nmain:\n    ; Send UDP request to 127.0.0.1:1337\n    ; Timeout after 1 second\n    ; Use raw syscalls (exit = 60, write = 1, read = 0)\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use\n",
+   "answer": "```nasm\nsection .text\n    global main\n\nmain:\n    ; Send UDP request to 127.0.0.1:1337\n    ; Timeout after 1 second\n    ; Use raw syscalls (exit = 60, write = 1, read = 0)\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use write syscall to send data\n    ; Use read syscall to receive data\n\n    ; Send UDP request\n    ; Use",
+   "shown": "  KO Build\n     Kind: basic\n     Command: nasm -f elf64 asm18.s -o asm18.o && ld asm18.o -o asm18\n     Exit code: expected 0, got 1\n     stderr:\n       asm18.s:1: warning: unterminated string (missing ``') [-w+pp-open-string]\n       asm18.s:1: error: label or instruction expected at start of line\n  KO Timeout when no server (skipped after critical failure)\n  KO Sends a UDP packet to :1337 (skipped after critical failure)\n  KO Prints the server's reply (skipped after critical failure)\n  KO No comments (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "Timeout when no server",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "Sends a UDP packet to :1337",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Prints the server's reply",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm19",
+   "name": "UDP Server",
+   "class": "SYNTAXE",
+   "tokens": 165,
+   "capped": false,
+   "has_code_block": true,
+   "built": false,
+   "tests_passed": 0,
+   "tests_run": 1,
+   "program": "section .text\n    global main\n\nmain:\n    ; Start listening on UDP port 1337\n    ; Log messages to 'messages' file\n    ; Use raw syscalls (exit = 60, write = 1, read = 0)\n\n    ; Check if port is available\n    ; (This is a simplified version; actual implementation would include more logic)\n\n    ; Start listening\n    ; (This is a simplified version; actual implementation would include more logic)\n\n    ; Read messages from the UDP socket\n    ; (This is a simplified version; actual implementation would include more logic)\n\n    ; Exit the program\n    ; (This is a simplified version; actual implementation would include more logic)\n\n    ; Exit the program\n    exit 0\n",
+   "answer": "```nasm\nsection .text\n    global main\n\nmain:\n    ; Start listening on UDP port 1337\n    ; Log messages to 'messages' file\n    ; Use raw syscalls (exit = 60, write = 1, read = 0)\n\n    ; Check if port is available\n    ; (This is a simplified version; actual implementation would include more logic)\n\n    ; Start listening\n    ; (This is a simplified version; actual implementation would include more logic)\n\n    ; Read messages from the UDP socket\n    ; (This is a simplified version; actual implementation would include more logic)\n\n    ; Exit the program\n    ; (This is a simplified version; actual implementation would include more logic)\n\n    ; Exit the program\n    exit 0\n```",
+   "shown": "  KO Build\n     Kind: basic\n     Command: nasm -f elf64 asm19.s -o asm19.o && ld asm19.o -o asm19\n     Exit code: expected 0, got 1\n     stderr:\n       asm19.s:22: error: parser: instruction expected\n  KO Receives and logs to 'messages' (skipped after critical failure)\n  KO Logs multiple messages (keeps listening) (skipped after critical failure)\n  KO No comments (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "Receives and logs to 'messages'",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Logs multiple messages (keeps listening)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm20",
+   "name": "Multi-Client TCP Server",
+   "class": "SYNTAXE",
+   "tokens": 700,
+   "capped": true,
+   "has_code_block": true,
+   "built": false,
+   "tests_passed": 0,
+   "tests_run": 1,
+   "program": "```nasm\nsection .data\n    server_port    dd 4242\n    server_address dd 127.0.0.1\n    server_commands dd \"PING\", \"PONG\", \"REVERSE\", \"EXIT\", 0\n\nsection .bss\n    _server_commands dd 0\n\nsection .text\n    global _start\n\n_start:\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, 4242\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_address\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, server_port\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi\n",
+   "answer": "```nasm\nsection .data\n    server_port    dd 4242\n    server_address dd 127.0.0.1\n    server_commands dd \"PING\", \"PONG\", \"REVERSE\", \"EXIT\", 0\n\nsection .bss\n    _server_commands dd 0\n\nsection .text\n    global _start\n\n_start:\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, 4242\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_address\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, server_port\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi, 0\n    mov rax, 4\n    mov rax, 0\n    mov rdi, 0\n    mov rdi, server_commands\n    syscall write, rax, rdi",
+   "shown": "  KO Build\n     Kind: basic\n     Command: nasm -f elf64 asm20.s -o asm20.o && ld asm20.o -o asm20\n     Exit code: expected 0, got 1\n     stderr:\n       asm20.s:1: warning: unterminated string (missing ``') [-w+pp-open-string]\n       asm20.s:1: error: label or instruction expected at start of line\n       asm20.s:4: error: too many periods in floating-point constant\n  KO PING -> PONG (skipped after critical failure)\n  KO REVERSE Hello -> olleH (skipped after critical failure)\n  KO EXIT command replies Goodbye! (skipped after critical failure)\n  KO No comments (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "PING -> PONG",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "REVERSE Hello -> olleH",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "EXIT command replies Goodbye!",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm21",
+   "name": "Shellcode Loader",
+   "class": "LOGIQUE",
+   "tokens": 11,
+   "capped": false,
+   "has_code_block": true,
+   "built": true,
+   "tests_passed": 1,
+   "tests_run": 2,
+   "program": "asm21.s\n",
+   "answer": "```nasm\nasm21.s\n```",
+   "shown": "  OK Build\n  KO Shellcode exit(42)\n     Kind: basic\n     Command: ./asm21 $'\\x48\\x31\\xff\\x40\\xb7\\x2a\\x48\\x31\\xc0\\xb0\\x3c\\x0f\\x05'\n     Exit code: expected 42, got 126\n     stderr:\n       bash: line 1: ./asm21: cannot execute binary file: Exec format error\n  KO Shellcode exit(0) (skipped after critical failure)\n  KO No comments (skipped after critical failure)\n  KO No argument -> exit 2, no output (skipped after critical failure)\n  KO Too many arguments -> exit 2, no output (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ok"
+    },
+    {
+     "name": "Shellcode exit(42)",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "Shellcode exit(0)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "No argument -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Too many arguments -> exit 2, no output",
+     "visibility": "grading",
+     "status": "skipped"
+    }
+   ]
+  },
+  {
+   "id": "asm22",
+   "name": "Binary Packer (Bonus)",
+   "class": "SYNTAXE",
+   "tokens": 700,
+   "capped": true,
+   "has_code_block": true,
+   "built": false,
+   "tests_passed": 0,
+   "tests_run": 1,
+   "program": "```nasm\nsection .data\n    encrypted_data    .ascii \"encrypted_data\"\n\nsection .text\n    global _start\n\n_start:\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    mov rax, encrypted_data\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n",
+   "answer": "```nasm\nsection .data\n    encrypted_data    .ascii \"encrypted_data\"\n\nsection .text\n    global _start\n\n_start:\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    mov rax, encrypted_data\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi\n    xor rdi, rdi\n    xor rbx, rbx\n\n    xor rax, rax\n    xor rdx, rdx\n    xor rsi, rsi",
+   "shown": "  KO Build\n     Kind: basic\n     Command: nasm -f elf64 asm22.s -o asm22.o && ld asm22.o -o asm22\n     Exit code: expected 0, got 1\n     stderr:\n       asm22.s:1: warning: unterminated string (missing ``') [-w+pp-open-string]\n       asm22.s:1: error: label or instruction expected at start of line\n       asm22.s:3: error: parser: instruction expected\n  KO Packing produces asm00_packed (skipped after critical failure)\n  KO Packed file is not a copy of the input (skipped after critical failure)\n  KO Packed binary self-decrypts and exits 0 (skipped after critical failure)\n  KO Payload is encrypted (no cleartext from the original) (skipped after critical failure)\n  KO Packed file carries the executable bit (skipped after critical failure)\n  KO Packed program keeps its behaviour (asm01 prints 1337) (skipped after critical failure)\n  KO Packed file is a valid ELF (skipped after critical failure)\n  KO No comments (skipped after critical failure)",
+   "tests": [
+    {
+     "name": "No binaries",
+     "visibility": "basic",
+     "status": "not_run"
+    },
+    {
+     "name": "Build",
+     "visibility": "basic",
+     "status": "ko"
+    },
+    {
+     "name": "Packing produces asm00_packed",
+     "visibility": "basic",
+     "status": "skipped"
+    },
+    {
+     "name": "Packed file is not a copy of the input",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Packed binary self-decrypts and exits 0",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Payload is encrypted (no cleartext from the original)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Packed file carries the executable bit",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Packed program keeps its behaviour (asm01 prints 1337)",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "Packed file is a valid ELF",
+     "visibility": "grading",
+     "status": "skipped"
+    },
+    {
+     "name": "No comments",
+     "visibility": "basic",
+     "status": "skipped"
+    }
+   ]
+  }
+ ]
+}

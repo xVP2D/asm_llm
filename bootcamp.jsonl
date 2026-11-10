@@ -1,0 +1,12 @@
+{"id": "asm00", "name": "Return Zero", "statement": "Create a program that exits with code 0."}
+{"id": "asm01", "name": "Print 1337", "statement": "Create a program that prints '1337' and exits with code 0."}
+{"id": "asm02", "name": "Read input and check if 42", "statement": "Read from stdin. If the input is exactly '42', print '1337' and exit 0. Anything else (another number, text, empty input) exits 1 and prints nothing."}
+{"id": "asm03", "name": "Read argument and check if 42", "statement": "Check if the first argument equals '42'. If yes, print '1337' and exit 0; otherwise exit 1 and print nothing. Exactly one argument: no argument or more than one exits 2."}
+{"id": "asm04", "name": "Even Number Test", "statement": "Read a number from stdin. Exit 0 if even, exit 1 if odd, exit 2 if it is not a number. The number may be negative (-4 is even, -5 is odd) and is a signed 64-bit integer."}
+{"id": "asm05", "name": "Print Argument", "statement": "Print the string passed as argument. Exactly one argument: anything else exits 2 and prints nothing."}
+{"id": "asm06", "name": "Add Two Numbers", "statement": "Add the two numbers passed as arguments and print the result. Exactly two arguments (otherwise exit 2). Numbers may be negative; they are signed 64-bit integers. An invalid number or an overflowing sum exits 1 and prints nothing."}
+{"id": "asm07", "name": "Prime Number Test", "statement": "Read a number from stdin. Exit 0 if prime, exit 1 if not. The number may be negative; a negative number is not prime. Empty or non-numeric input exits 2."}
+{"id": "asm08", "name": "Sum of Integers", "statement": "Print the sum of the integers from 1 to N-1, N being the only argument. For N <= 1 the range is empty and the sum is 0. Wrong number of arguments exits 2; a non-numeric argument exits 1."}
+{"id": "asm09", "name": "Base Conversion", "statement": "Convert the decimal number given as argument to hexadecimal (default, uppercase) or binary (-b flag). Negative numbers print a leading minus: -255 -> -FF. Wrong usage exits 2; a non-numeric argument exits 1."}
+{"id": "asm10", "name": "Maximum of Three", "statement": "Print the maximum of the three numbers passed as arguments. Exactly three arguments (otherwise exit 2). Numbers may be negative; an invalid number exits 1."}
+{"id": "asm11", "name": "Count Vowels", "statement": "Count vowels (a,e,i,o,u) in string from stdin."}
