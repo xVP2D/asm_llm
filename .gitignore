@@ -10,3 +10,5 @@ model/
 .venv/
 __pycache__/
 gen/
+/asm00
+/asm00.s
