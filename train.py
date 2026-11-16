@@ -8,12 +8,16 @@
 # [tool.uv.sources]
 # torch = { index = "pytorch-cpu" }
 # ///
-"""LoRA fine-tuning of Qwen3-0.6B on a gen_data.py file. Writes a PEFT adapter directory
+"""LoRA fine-tuning of Qwen3-0.6B on a training jsonl. Writes a PEFT adapter directory
 (adapter_config.json + adapter_model.safetensors), the format the grader loads.
 
-Usage: train.py <base-model> <adapter-out> <train.jsonl> [--epochs 2] [--rank 8] [--seed 1]
-       uv run train.py Qwen/Qwen3-0.6B adapter kit.jsonl --device cpu --epochs 1 --lr 5e-4 --rank 8 --seed 0
+Usage: train.py --tier <letter> --model <base-model> --out <adapter-out> [--epochs 2] [--rank 8] [--seed 1]
+       train.py --model <base-model> --out <adapter-out> --data <train.jsonl> [...]
+       uv run train.py --tier A --model ./model --out adapter --device cpu --epochs 1 --lr 5e-4 --rank 8 --seed 0
+--tier <letter> trains on data/<letter>.jsonl unless --data overrides it.
 <base-model> is a local directory or a Hugging Face id. GPU if one is visible, else CPU.
+Each data line is either {"messages": [system, user, assistant]} (assistant content is the
+complete ```nasm fenced answer) or the older {"id", "statement", "solution"} row.
 --base olmo-3-7b-instruct: QLoRA (4-bit NF4, CUDA only), attention only, rank 16 at most."""
 import argparse, json, random, sys, time
 from pathlib import Path
@@ -24,7 +28,10 @@ from peft import LoraConfig, get_peft_model
 from prompt import BASES, DEFAULT_BASE, QWEN_REVISION, SYSTEM, build_prompt, load_causal_lm, load_tokenizer, user_message
 
 ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-ap.add_argument("model"); ap.add_argument("out"); ap.add_argument("data")
+ap.add_argument("--model", default="./model", help="base model: local directory or a Hugging Face id")
+ap.add_argument("--out", default="adapter", help="directory the LoRA adapter is written to")
+ap.add_argument("--tier", help="tier letter (A, B, ...): trains on data/<tier>.jsonl unless --data is given")
+ap.add_argument("--data", help="training data jsonl; required unless --tier is given")
 ap.add_argument("--epochs", type=int, default=2)
 ap.add_argument("--rank", type=int, default=8, help="1 to 64: the grader refuses above 64")
 ap.add_argument("--lr", type=float, default=2e-4)
@@ -39,6 +46,10 @@ ap.add_argument("--base", default=DEFAULT_BASE, choices=sorted(BASES), help="the
 ap.add_argument("--revision", help="Hugging Face revision; default: the one pinned for --base, when <base-model> is its id")
 ap.add_argument("--metrics", help="also write timings and peak VRAM to this JSON file (bench.py)")
 a = ap.parse_args()
+if not a.data:
+    if not a.tier:
+        ap.error("--data or --tier is required")
+    a.data = str(Path("data") / f"{a.tier}.jsonl")
 base = BASES[a.base]
 qlora = base["quant"] == "4bit"
 if not 1 <= a.rank <= base["rank_max"]:
@@ -63,14 +74,22 @@ if tok.pad_token is None:
 rows = [json.loads(l) for l in open(a.data) if l.strip()]
 samples = []
 for i, r in enumerate(rows):
-    user = user_message(r.get("id") or f"v{i:04d}", r["statement"])
-    if a.template == "server":
-        prompt = build_prompt(system, user, a.base)
+    if "messages" in r:
+        msgs = r["messages"]
+        row_system = next((m["content"] for m in msgs if m["role"] == "system"), system)
+        user = next(m["content"] for m in msgs if m["role"] == "user")
+        assistant = next(m["content"] for m in msgs if m["role"] == "assistant")
     else:
-        prompt = tok.apply_chat_template([{"role": "system", "content": system}, {"role": "user", "content": user}],
+        row_system = system
+        user = user_message(r.get("id") or f"v{i:04d}", r["statement"])
+        assistant = "```nasm\n" + r["solution"].strip() + "\n```"
+    if a.template == "server":
+        prompt = build_prompt(row_system, user, a.base)
+    else:
+        prompt = tok.apply_chat_template([{"role": "system", "content": row_system}, {"role": "user", "content": user}],
                                          tokenize=False, add_generation_prompt=True)
     p_ids = tok(prompt, add_special_tokens=False)["input_ids"]
-    a_ids = tok("```nasm\n" + r["solution"].strip() + "\n```" + tok.eos_token, add_special_tokens=False)["input_ids"]
+    a_ids = tok(assistant + tok.eos_token, add_special_tokens=False)["input_ids"]
     ids, labels = (p_ids + a_ids)[:a.max_len], ([-100] * len(p_ids) + a_ids)[:a.max_len]
     samples.append((torch.tensor(ids), torch.tensor(labels)))
 print(f"{len(samples)} examples, device {device}, {str(dtype).split('.')[-1]}, rank {a.rank}, "
