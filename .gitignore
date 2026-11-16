@@ -1,8 +1,9 @@
 # asm_llm kit: the model lives in the repository, never in git. The grader puts the same
-# pinned snapshot at ./model and refuses any committed weight.
+# pinned snapshot at ./model and refuses any committed weight (no model/, no adapter/,
+# no file above 8 MiB).
 model/
+adapter/
 *.safetensors
-!adapter/adapter_model.safetensors
 *.bin
 *.gguf
 *.pt
